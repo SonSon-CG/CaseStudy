@@ -5,39 +5,39 @@
   <title>title</title>
 </head>
 <body>
-<h1>quan li</h1>
+<h1>Quản lý bán vé xem phim</h1>
 
 <div>
-  <h3>them phim</h3>
-  <label for="movie-name">ten:</label>
+  <h3>Thêm phim mới</h3>
+  <label for="movie-name">Tên phim:</label>
   <input type="text" id="movie-name"><br>
-  <label for="ticket-quantity"> so luong:</label>
+  <label for="ticket-quantity"> Số lượng vé:</label>
   <input type="number" id="ticket-quantity"><br>
-  <label for="ticket-price">price</label>
+  <label for="ticket-price">Giá vé:</label>
   <input type="number" id="ticket-price"><br>
-  <label for="movie-info">info</label><br>
+  <label for="movie-info">Thông tin phim</label><br>
   <textarea id="movie-info" placeholder="..."></textarea><br>
-  <label for="movie-poster">link potster:</label>
+  <label for="movie-poster">Link poster:</label>
   <input type="text" id="movie-poster" placeholder=".."><br>
-  <button id="add-movie-btn" onclick="addMovieBtn()" >add</button>
+  <button id="add-movie-btn" onclick="addMovieBtn()" >Thêm phim</button>
 </div>
 
 <div>
-  <h3>lít phim</h3>
+  <h3>Danh sách phim</h3>
   <ul id="movie-list" >
   </ul>
 </div>
 
 <div>
-  <h3>lich su ban</h3>
+  <h3>Lịch sử bán vé</h3>
   <table border="1">
     <thead>
     <tr>
-      <th>ten</th>
-      <th>sluong ve</th>
-      <th>price</th>
-      <th>tong tien</th>
-      <th>Time</th>
+      <th>Tên phim</th>
+      <th>Số lượng vé</th>
+      <th>Giá vé</th>
+      <th>Tổng tiền</th>
+      <th>Thời gian bán</th>
     </tr>
     </thead>
     <tbody id="ticket-history">

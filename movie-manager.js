@@ -2,8 +2,25 @@ class MovieManager {
     constructor() {
         this.movies = [];
         this.totalRevenue = 0;
+        this.addMovie(
+            "Iron Man",
+            75,
+            120000,
+            `Đạo diễn: Jon Favreau <br> Hãng sản xuất: Marvel Studios<br>Thời lượng: 126 phút<br>Thể loại: Hành động`,
+            "https://upload.wikimedia.org/wikipedia/vi/7/70/Ironmanposter.JPG"
+        );
+
+        this.addMovie(
+            "The Cabin in the Woods",
+            125,
+            110000,
+            `Đạo diễn: Drew Goddard<br>Hãng sản xuất: Lionsgate<br>Thời lượng: 95 phút<br>Thể loại: Kinh dị`,
+            "https://upload.wikimedia.org/wikipedia/en/8/84/The_Cabin_in_the_Woods_%282012%29_theatrical_poster.jpg"
+        );
+
+        this.displayMovies();
     }
-// 1111111111111
+
     // them phim moi
     addMovie(name, tickets, price, info, poster) {
         if (!name || tickets <= 0 || price <= 0 || !info || !poster) {
@@ -20,8 +37,9 @@ class MovieManager {
     }
 
 
-    // show list phim
+    // show list phim/ cập nhật hiển thị sau khi thêm phim, xóa phim, bán vé
     displayMovies() {
+        //tạo 1 biến movie list để innerhtml nó
         const movieList = document.getElementById('movie-list');
         movieList.innerHTML = '';
         this.movies.forEach((movie, index) => {
@@ -37,16 +55,18 @@ class MovieManager {
                         <button onclick="manager.removeMovie(${index})">Xóa phim</button>
                     </div>
                 `;
-            listItem.style.display = "flex";
+
             movieList.appendChild(listItem);
         });
     }
 
     // xoa phim
-    removeMovie(index){
-        this.movies.splice(index, 1);
-        this.displayMovies();
-
+    removeMovie(index) {
+        const movieName = this.movies[index].name;
+        if (confirm(`Bạn có chắc muốn xóa phim "${movieName}" không?`)) {
+            this.movies.splice(index, 1);
+            this.displayMovies();
+        }
     }
     //                               XEM LAI
 
@@ -60,13 +80,27 @@ class MovieManager {
         movie.tickets -= ticketsToSell;
         this.totalRevenue += totalSale;
 
-
+        this.addTicketHistory(movie.name, ticketsToSell, movie.price, totalSale);
         alert(`Đã bán ${ticketsToSell} vé cho phim "${movie.name}". Doanh thu: ${totalSale}đ`);
         this.displayMovies();
     }
 }
     // show tong doanh thu
     // them lich su ban
+
+    addTicketHistory(name, quantity, price, total) {
+        const historyTable = document.getElementById('ticket-history');
+        const row = document.createElement('tr');
+        const currentTime = new Date().toLocaleString();
+        row.innerHTML = `
+                <td>${name}</td>
+                <td>${quantity}</td>
+                <td>${price}đ</td>
+                <td>${total}đ</td>
+                <td>${currentTime}</td>
+            `;
+        historyTable.appendChild(row);
+    }
 
     // reset input
     resetInputs() {
@@ -76,7 +110,9 @@ class MovieManager {
         document.getElementById('movie-info').value = '';
         document.getElementById('movie-poster').value = '';
     }
-    // san su kien vao nut " them phim"
+
+
+    // them su kien vao nut " them phim"
 }
 let manager = new MovieManager();
 
