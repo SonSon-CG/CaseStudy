@@ -22,7 +22,7 @@ class MovieManager {
     // them phim moi
     addMovie(name, tickets, price, info, poster) {
         if (!name || tickets <= 0 || price <= 0 || !info || !poster) {
-            alert("Vui long dien day du va chinh xac thong tin");
+            alert("Vui lòng điền đầy đủ vàc chính xác thông tin");
             this.resetInputs();
         } else {
 //     them doi tuong phim moi vao mang movie, phan tu la doi tuong gom 5 thuoc tinh
@@ -33,7 +33,7 @@ class MovieManager {
     }
     // show list phim/ cập nhật danh sách hiển thị
     displayMovies() {
-        const movieList = document.getElementById('movie-list');
+        let movieList = document.getElementById('movie-list');
         movieList.innerHTML = '';
         this.movies.forEach((movie, index) => {
             const status = movie.tickets > 0 ? `Số vé còn lại: ${movie.tickets}` : `<span style="color:red;">Hết vé</span>`;
@@ -98,15 +98,4 @@ class MovieManager {
         document.getElementById('movie-info').value = '';
         document.getElementById('movie-poster').value = '';
     }
-}
-
-let manager = new MovieManager();
-
-function addMovieBtn() {
-    let name = document.getElementById('movie-name').value;
-    let tickets = parseInt(document.getElementById('ticket-quantity').value);
-    let price = parseFloat(document.getElementById('ticket-price').value);
-    let info = document.getElementById('movie-info').value;
-    let poster = document.getElementById('movie-poster').value;
-    manager.addMovie(name, tickets, price, info, poster);
 }

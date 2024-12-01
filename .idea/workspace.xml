@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d024787-b015-45b2-a5d0-9f347bb8c6c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/movieManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/movie-manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REAL-quanlybanvexemphim.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy-QuanLyBanVeXemPhim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/classManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -37,6 +41,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,7 +69,8 @@
       <workItem from="1732698037718" duration="468000" />
       <workItem from="1732756200024" duration="623000" />
       <workItem from="1732758636890" duration="17508000" />
-      <workItem from="1732842734869" duration="6666000" />
+      <workItem from="1732842734869" duration="17881000" />
+      <workItem from="1733059620349" duration="1574000" />
     </task>
     <servers />
   </component>
